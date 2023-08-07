@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <!-- Created using Storyline 360 - http://www.articulate.com  -->
-  <!-- version: 3.76.30446.0 -->
+  <!-- version: 3.78.30747.0 -->
   <title>Connectionsofbusiness</title>
   <meta http-equiv="x-ua-compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no,minimal-ui"/>
@@ -28,7 +28,7 @@
       captureRc: false,
       browserSize: 'optimal',
       bgColor: '#FFFFFF',
-      features: 'AccessibleVideo,ConnectionMessages,DropIn1,FullScreenToggle,InsertSvgPicture,LayerPresentAsDialog,MultipleQuizTracking,PlayerSpeedControl,StreamingVideo,UpdatedThemeEditor,UseAudioElement,VideoTranscripts',
+      features: 'AccessibleVideo,BgAudioBlip,ConnectionMessages,DropIn1,DropIn2,DropIn3,FullScreenToggle,LayerPresentAsDialog,MultipleQuizTracking,PlayerSpeedControl,StreamingVideo,UpdatedThemeEditor,UseAudioElement,VideoSync',
       themeName: 'unified',
       preloaderColor: '#8C8C8C',
       suppressAnalytics: false,
@@ -36,8 +36,8 @@
       publishSource: 'storyline',
       aid: 'aid|a8fbaf31-cd82-4534-a00a-83a3256e9906',
       cid: 'caf7d2b8-fbc6-4d82-8a32-0494d2bd7c84',
-      playerVersion: '3.76.30446.0',
-      publishTimestamp: '2023-07-26T11:51:35.3248689Z',
+      playerVersion: '3.78.30747.0',
+      publishTimestamp: '2023-08-07T13:12:33.9305551Z',
       maxIosVideoElements: 10,
       connectionSettings: { message: 'You%20are%20offline.%20Trying%20to%20reconnect...', useDarkTheme: true, mode: 'disabled' },
 
@@ -342,7 +342,7 @@
     function assetFailed(url) {
       if (!useConnectionMessages) { return; }
       if (!DS.connection.assets[url]) {
-        if (/\.js$/.test(url)) {
+        if (/\.js$/.test(url) && url.indexOf('transcripts') === -1) {
           setTimeout(function() {
             if (DS.connection.lastSlideLoaded != null) {
               DS.connection.lastSlideLoaded();
